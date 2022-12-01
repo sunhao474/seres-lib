@@ -1,0 +1,107 @@
+body {
+
+  .select-trigger {
+    &:has(.el-select__input:focus) {
+      background: #fff;
+    }
+  }
+
+  .el-input.is-focus {
+    background: #fff;
+  }
+
+  div.el-select {
+    .el-input.is-focus {
+      .el-input__wrapper {
+        background: #fff;
+      }
+    }
+  }
+
+  .el-input {
+    --el-input-bg-color: #F2F3F5;
+    // --el-input-border-color: #F2F3F5;
+    // --el-input-hover-border-color: #F2F3F5;
+    --el-input-border-color: rgba(255, 255, 255, 0);
+    --el-input-hover-border-color: rgba(175, 143, 143, 0);
+    --el-input-clear-hover-color: rgba(255, 255, 255, 0);
+    --el-input-border: none;
+    --el-disabled-bg-color: #F7F8FA;
+    --el-disabled-border-color: rgba(255, 255, 255, 0);
+    --el-disabled-text-color: #C9CDD4;
+
+    &:focus {
+      background: #fff !important;
+    }
+
+    // .el-select .el-input.is-disabled .el-input__wrapper {
+    //   box-shadow: none;
+    // }
+
+    &.is-disabled {
+      input::-webkit-input-placeholder {
+        color: #C9CDD4 !important;
+      }
+
+      >.el-input__wrapper {
+        &:hover {
+          background: #F7F8FA;
+          border: none;
+        }
+      }
+    }
+
+    .el-input__wrapper {
+
+      &:focus {
+        --el-input-bg-color: #fff !important;
+      }
+
+      &:hover {
+        background: #E5E6EB;
+      }
+
+      &:has(.el-input__inner:hover) {
+        background: #fff !important;
+      }
+    }
+
+    .el-input__wrapper.is-focus {
+      background: #fff;
+    }
+  }
+
+  .el-range-editor.is-active {
+    background: #fff;
+
+    &:hover {
+      background: #fff !important;
+    }
+  }
+
+  .el-date-editor {
+    background: #F2F3F5;
+    --el-input-bg-color: #F2F3F5;
+    --el-input-border-color: rgba(255, 255, 255, 0);
+    --el-input-hover-border-color: rgba(255, 255, 255, 0);
+
+    &:hover {
+      background: #E5E6EB;
+    }
+  }
+
+  .el-select {
+    --el-select-border-color-hover: rgba(255, 255, 255, 0);
+    --el-select-close-hover-color: rgba(255, 255, 255, 0);
+    --el-select-disabled-border: rgba(255, 255, 255, 0);
+    border: none;
+
+    &:hover {
+      border: none;
+    }
+
+    &:focus {
+      background: #fff !important;
+    }
+  }
+}
