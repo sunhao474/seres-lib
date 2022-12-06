@@ -1,0 +1,72 @@
+@forward 'node_modules/element-plus/theme-chalk/src/common/var' with (
+  $colors: (
+    'primary': (
+      'base': #1a5bf1,
+    ),
+    'success': (
+      'base': #00b42a,
+    ),
+    'warning': (
+      'base': #ff7d00,
+    ),
+    'danger': (
+      'base': #f53f3f,
+    ),
+    'error': (
+      'base': #f53f3f,
+    ),
+    'info': (
+      'base': #909399,
+    ),
+  ),
+
+  $fill-color: (
+    'light': #f2f3f5, // 导航栏选中背景，内容区背景，下拉选择框hover背景
+    'input-bg': #e5e6eb,
+  ),
+
+  $text-color: (
+    'primary': #1d2129, // cover
+    'regular': #4e5969, // cover
+    'secondary': #909399,
+    'placeholder': #a8abb2,
+    'disabled': #c0c4cc,
+  ),
+
+  // button
+  $button: (
+    'text-color': var(--el-text-color-primary),
+  ),
+
+  // input
+  $input: (
+    'text-color': var(--el-text-color-primary),
+    'border-color': none,
+    'border-radius': var(--el-border-radius-small),
+    'bg-color': var(--el-fill-color-light),
+    'placeholder-color': #86909c,
+    'hover-border-color': none,
+  ),
+
+  $datepicker: (
+    'inrange-bg-color': '#e8f3ff',
+  ),
+
+  // select
+  $select: (
+    'border-color-hover': none,
+  ),
+
+  $menu: (
+    'base-level-padding': 11px, // cover
+    'level-padding': 11px, // cover
+  ),
+
+  $table: (
+    'border-color': var(--el-fill-color-input-bg),
+    'header-text-color': var(--el-text-color-primary),
+    'text-color': var(--el-text-color-primary),
+    'header-bg-color': #F7F8FA,
+    'row-hover-bg-color': #EFF7FF
+  )
+);

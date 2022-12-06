@@ -1,6 +1,6 @@
 <script>
 import { defineComponent, reactive, toRefs } from 'vue'
-import { Filter } from '../../components'
+import { Filter } from 'lib/components'
 
 export default defineComponent({
   components: {

@@ -1,0 +1,83 @@
+@import "reset.less";
+
+// custom css
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.none {
+  display: none;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.pb20 {
+  padding-bottom: 20px;
+}
+
+.fb {
+  font-weight: bold;
+}
+
+.pr10 {
+  padding-right: 10px
+}
+
+.p20 {
+  padding: 20px
+}
+
+.pb0 {
+  padding-bottom: 0;
+}
+
+.operate-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  .operate-btn {
+    .el-button {
+      min-width: 80px;
+    }
+  }
+}
+
+// 组织操作按钮
+.org-operate {
+  margin-top: -8px !important;
+}
+
+// 密码输入框问题
+.password-input .el-input__inner {
+  -webkit-text-security: disc;
+}
+
+@import "layout.less";
+@import "element-cover.less";

@@ -1,6 +1,6 @@
 {
   "name": "seres-lib",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "files": [
     "dist"
   ],
@@ -11,8 +11,7 @@
       "import": "./dist/seres-lib.es.js",
       "require": "./dist/seres-lib.umd.js"
     },
-    "./style.css": "./dist/style.css",
-    "./components": "./dist/components"
+    "./lib/": "./dist/lib/"
   },
   "scripts": {
     "dev": "vite",

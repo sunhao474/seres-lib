@@ -19,8 +19,8 @@ export default defineConfig({
     }),
     viteStaticCopy({
       targets: [
-        {
-          src: path.resolve(__dirname, 'components'),
+        { 
+          src: path.resolve(__dirname, 'lib'),
           dest: path.resolve(__dirname, 'dist')
         }
       ]
@@ -31,7 +31,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src")
+      "@": path.resolve(__dirname, "src"),
+      "lib": path.resolve(__dirname, 'lib')
     }
   },
   build: {
