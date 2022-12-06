@@ -4,6 +4,7 @@ import path, { resolve } from 'path'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,6 +16,14 @@ export default defineConfig({
     }),
     Components({
       resolvers: [ElementPlusResolver()],
+    }),
+    viteStaticCopy({
+      targets: [
+        {
+          src: path.resolve(__dirname, 'components'),
+          dest: path.resolve(__dirname, 'dist')
+        }
+      ]
     })
   ],
   server: {
@@ -27,7 +36,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: resolve(__dirname, 'components/index.js'),
+      entry: resolve(__dirname, 'components/main.js'),
       name: 'seresLib',
       fileName: 'seres-lib'
     },

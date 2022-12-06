@@ -1,6 +1,6 @@
 {
   "name": "seres-lib",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "files": [
     "dist"
   ],
@@ -11,7 +11,8 @@
       "import": "./dist/seres-lib.es.js",
       "require": "./dist/seres-lib.umd.js"
     },
-    "./dist": "./dist"
+    "./style.css": "./dist/style.css",
+    "./components": "./dist/components"
   },
   "scripts": {
     "dev": "vite",
@@ -25,8 +26,10 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
+    "copy-webpack-plugin": "^11.0.0",
     "unplugin-auto-import": "^0.12.0",
     "unplugin-vue-components": "^0.22.11",
-    "vite": "^2.9.9"
+    "vite": "^2.9.9",
+    "vite-plugin-static-copy": "^0.12.0"
   }
 }
