@@ -1,10 +1,11 @@
 <script>
 import { defineComponent, reactive, toRefs } from 'vue'
-import { Filter } from 'lib/components'
+import { Filter, TablePagination } from 'lib/components'
 
 export default defineComponent({
   components: {
-    Filter
+    Filter,
+    TablePagination
   },
   props: {
     msg: String
@@ -25,9 +26,37 @@ export default defineComponent({
           key: 'inputNum2',
           placeholder: '你好世界',
           clearable: true,
-          type: 'input'
+          type: 'select',
+          options: [
+            '充电', '放电'
+          ]
         },
-      ]
+      ],
+      tableData: {
+        currentPage: 1,
+        pageSize: 10,
+        total: 20,
+        data: [
+          {
+            name: 's',
+            age: 1
+          },
+          {
+            name: 's2',
+            age: 12
+          },
+        ],
+        column: [
+          {
+            label: '年龄',
+            prop: 'age'
+          },
+          {
+            label: '名字',
+            prop: 'name'
+          }
+        ]
+      }
     })
 
     function handleClickButton() {
@@ -44,6 +73,9 @@ export default defineComponent({
 
 <template>
   <Filter msg="123321" :inline="true" :formParams="formParams" :filterOpts="filterOpts"/>
+  <TablePagination
+    :tableData="tableData"
+  />
   <button @click="handleClickButton">点我一刀999</button>
 </template>
 

@@ -120,8 +120,12 @@
 import { defineComponent, reactive, onMounted, toRefs, ref } from 'vue'
 import { Search, RefreshRight } from '@element-plus/icons-vue'
 import { filter_null } from 'lib/utils'
+import { ElForm, ElFormItem, ElButton, ElCascader, ElSelect, ElOption, ElTooltip, ElInput, ElTreeSelect, ElDatePicker } from 'element-plus'
 
 export default defineComponent({
+  components: {
+    ElForm, ElFormItem, ElButton, ElCascader, ElSelect, ElOption, ElTooltip, ElInput, ElTreeSelect, ElDatePicker
+  },
   props: {
     labelWidth: {
       type: Number,

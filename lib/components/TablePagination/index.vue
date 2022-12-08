@@ -130,8 +130,12 @@
     </div>
   </template>
   <script>
+  import { ElTable, ElTableColumn, ElPagination, ElRadio, ElButton, ElCascader, ElPopover, ElSwitch, ElTooltip } from 'element-plus'
   export default {
     name: 'TablePagination',
+    components: {
+      ElTable, ElTableColumn, ElPagination, ElRadio, ElButton, ElCascader, ElPopover, ElSwitch, ElTooltip
+    },
     props: {
       tableData: {
         type: Object,
